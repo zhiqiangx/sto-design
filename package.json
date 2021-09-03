@@ -14,10 +14,7 @@
     "test": "react-app-rewired test"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["eslint-config-sto/react"]
   },
   "browserslist": {
     "production": [
@@ -39,10 +36,11 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "eslint-config-sto": "^1.1.2",
     "node-sass": "^6.0.1",
     "react-app-rewired": "^2.1.8",
-    "typescript": "^4.1.2",
     "react-scripts": "4.0.3",
-    "react-styleguidist": "^11.1.7"
+    "react-styleguidist": "^11.1.7",
+    "typescript": "^4.1.2"
   }
 }
