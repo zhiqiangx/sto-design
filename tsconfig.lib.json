@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "es5",                                     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    /* Emit */
+    "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+    "outDir": "./lib/es",                                   /* Specify an output folder for all emitted files. */
+    "noEmit": false,                                   /* Disable emitting files from a compilation. */
+    "declarationDir": "./lib/types",                           /* Specify the output directory for generated declaration files. */
+  },
+  "include": [
+    "src/components"
+  ]
+}

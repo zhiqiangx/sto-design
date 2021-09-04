@@ -1,7 +1,12 @@
 {
   "name": "sto-design",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.2",
+  "private": false,
+  "files": [
+    "lib/*"
+  ],
+  "module": "es/index.js",
+  "main": "es/index.js",
   "dependencies": {
     "@alifd/next": "^1.23.24",
     "@alifd/theme-sto": "^1.1.0",
@@ -13,6 +18,11 @@
   "scripts": {
     "start": "styleguidist server",
     "build": "styleguidist build",
+    "clean": "rimraf lib",
+    "build-sass-to-css": "node-sass-chokidar ./src/components -o lib/es",
+    "copy-component-scss": "cpx \"./src/components/**/*.scss\" lib/es",
+    "build-scss": "npm run build-sass-to-css && npm run copy-component-scss",
+    "build:es": "npm run clean && tsc -p tsconfig.lib.json && npm run build-scss",
     "start-web": "react-app-rewired start",
     "test": "react-app-rewired test"
   },
@@ -50,13 +60,16 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "babel-plugin-import": "^1.13.3",
+    "cpx": "^1.5.0",
     "customize-cra": "^1.0.0",
     "eslint-config-sto": "^1.1.2",
     "node-sass": "^6.0.1",
+    "node-sass-chokidar": "^1.5.0",
     "prop-types": "^15.7.2",
     "react-app-rewired": "^2.1.8",
     "react-scripts": "4.0.3",
     "react-styleguidist": "^11.1.7",
+    "rimraf": "^3.0.2",
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
