@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Button } from '@alifd/next';
+import TestButton from './components/TestButton';
 import './App.scss';
 
 const App: FunctionComponent = () => {
@@ -18,9 +19,10 @@ const App: FunctionComponent = () => {
           Learn React
         </a>
         <Button type="primary">HHHH</Button>
+        <TestButton>JJJJJ</TestButton>
       </header>
     </div>
   );
-}
+};
 
 export default App;
